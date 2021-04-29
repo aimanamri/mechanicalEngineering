@@ -1,2 +1,2 @@
 # python-mechEngineering
-Practice of mechanical engineering calculations using python. 
+Practice mechanical engineering calculations using python. 
