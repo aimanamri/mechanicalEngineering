@@ -1,4 +1,4 @@
-### Python libraries required (or just `pip install -r requirements.txt`) : 
+### Python libraries required  : 
 - [numpy](https://numpy.org/doc/)
 - [matplotlib](https://matplotlib.org/)
 - [scipy](https://www.scipy.org/docs.html)
