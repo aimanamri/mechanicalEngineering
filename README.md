@@ -31,8 +31,8 @@ Mechanical engineering basic calculations using Python
 Mathematical calculations using Python
 ### 1. Interpolation (線形補間) [O]
 
-### 2. Numerical intergration using trapezoidal rule and Simpson (数値積分：台形公式とシンプソン則) [x]
+### 2. Numerical intergration using trapezoidal rule and Simpson (数値積分：台形公式とシンプソン則) [O]
 
-### 3. Addition, subtraction and multiplication of matrice (行列の足し算・引き算・掛け算) [x]
+### 3. Addition, subtraction and multiplication of matrice (行列の足し算・引き算・掛け算) [O]
 
 ### 4. Eigenvector and eigenvalue (固有ベクトル・固有値) [x]
