@@ -1,44 +1,78 @@
-### Python libraries required  : 
-- [numpy](https://numpy.org/doc/)
-- [matplotlib](https://matplotlib.org/)
-- [scipy](https://www.scipy.org/docs.html)
-- [pyromat](http://pyromat.org/)
+<p align="center">
+  <a href="https://github.com/aimanamri/python-mechEngineering">
+    <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/aimanamri/python-mechEngineering">
+  </a>
 
-<hr>
-<br>
+  <a href="https://github.com/aimanamri/python-mechEngineering">
+    <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/aimanamri/python-mechEngineering">
+  </a>
+  
+  <a href="https://github.com/aimanamri/python-mechEngineering/stargazers">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/aimanamri/python-mechEngineering?style=social">
+  </a>
 
-># Mechanical Engineering stuffs
-Mechanical engineering basic calculations using Python
-### 1. Projectile motion (斜方投射) [O]
+  <a href="https://github.com/aimanamri/python-mechEngineering/commits/main">
+    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/aimanamri/python-mechEngineering">
+  </a>
 
-### 2. von Mises Failure Theory Plots [O]
+  <a href="https://github.com/aimanamri/python-mechEngineering">
+    <img alt="Repository Size" src="https://img.shields.io/github/repo-size/aimanamri/python-mechEngineering">
+  </a>
+</p>
 
-### 3. Shear Force Diagram,SFD and Bending Moment Diagram,BMD (せん断力図・曲げモーメント図) [O]
+## ▶️ Getting Started
 
-### 4. Heat effieciency, η of ideal Rankine cycle (理想ランキンサイクルの熱効率)  [x]
+Starting with **git clone**:
 
-### 5. Heat effieciency, η of  Rankine reheat cycle (理想ランキンサイクルの熱効率) [x]
+```bash
+git clone https://github.com/aimanamri/python-mechEngineering.git -b main
+```
 
-### 6. Coefficient of performance(COF) of ideal refrigeration cycle  [x]
+## Pre-Requisites
+- Python 3
+- Jupyter Notebook
+- Install all packages in requirements.txt
+```bash
+pip install numpy matplotlib scipy pyromat
+```
+```bash
+pip install -r requirements.txt
+```
+---
 
-### 7. Under damping system/vibration (不足減衰) [x]
+# 💻 Mechanical Engineering Calculations
++ [x] Projectile motion (斜方投射) <br>
+[projectile_motion.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/projectile_motion.ipynb)
++ [x] von Mises Failure Theory Plots <br>
+[vonmises-failure_plot.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/vonmises-failure_plot.ipynb)
++ [x] Shear Force Diagram,SFD and Bending Moment Diagram,BMD (せん断力図・曲げモーメント図) <br>
+[SFD-BMD.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/SFD-BMD.ipynb)
++ [ ] Mohr's Circle (モールの応力円)
 
-### 8. Over damping system/vibration (過減衰) [x]
++ [ ] Heat effieciency, η of ideal Rankine cycle (理想ランキンサイクルの熱効率)
 
-### 9. Mohr's Circle (モールの応力円) [x]
++ [ ] Heat effieciency, η of  Rankine reheat cycle (理想ランキンサイクルの熱効率)
 
-### 101. PID for velocity control [x]
-- `Reference` : [Automobile velocity control](http://apmonitor.com/pdc/index.php/Main/SpeedControl)
++ [ ] Coefficient of performance(COF) of ideal refrigeration cycle　(冷凍サイクルの成績係数/動作係数)
 
-<hr>
-<br>
++ [ ] Under damping system/vibration (不足減衰)
 
-># Math stuffs
-Mathematical calculations using Python
-### 1. Interpolation (線形補間) [O]
++ [ ] Over damping system/vibration (過減衰)
 
-### 2. Numerical intergration using trapezoidal rule and Simpson (数値積分：台形公式とシンプソン則) [O]
+---
 
-### 3. Addition, subtraction and multiplication of matrice (行列の足し算・引き算・掛け算) [O]
+# 💻 Engineering Math using Python 
+📔 [math.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/math.ipynb) - All calculation was made in this single notebook.
++ [x] Interpolation (線形補間)
 
-### 4. Eigenvector and eigenvalue (固有ベクトル・固有値) [x]
++ [x] Numerical intergration using trapezoidal rule and Simpson (数値積分：台形公式とシンプソン則)
+
++ [x] Addition, subtraction and multiplication of matrice (行列の足し算・引き算・掛け算)
+
++ [ ] Eigenvector and eigenvalue (固有ベクトル・固有値)
+
+## Project Status
+
+* █▒▒▒▒▒▒▒   In progress
+
+---
