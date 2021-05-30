@@ -47,17 +47,17 @@ pip install -r requirements.txt
 [vonmises-failure_plot.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/vonmises-failure_plot.ipynb)
 + [x] Shear Force Diagram,SFD and Bending Moment Diagram,BMD (せん断力図・曲げモーメント図) <br>
 [SFD-BMD.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/SFD-BMD.ipynb)
-+ [ ] Mohr's Circle (モールの応力円)
++ [x] Mohr's Circle (モールの応力円)<br>
+[mohr_circle.py](https://github.com/aimanamri/python-mechEngineering/blob/main/mohr_circle.py)
++ [ ] Heat effieciency, η of ideal Rankine cycle (理想ランキンサイクルの熱効率)<br>
 
-+ [ ] Heat effieciency, η of ideal Rankine cycle (理想ランキンサイクルの熱効率)
++ [ ] Heat effieciency, η of  Rankine reheat cycle (理想ランキンサイクルの熱効率)<br>
 
-+ [ ] Heat effieciency, η of  Rankine reheat cycle (理想ランキンサイクルの熱効率)
++ [ ] Coefficient of performance(COF) of ideal refrigeration cycle　(冷凍サイクルの成績係数/動作係数)<br>
 
-+ [ ] Coefficient of performance(COF) of ideal refrigeration cycle　(冷凍サイクルの成績係数/動作係数)
++ [ ] Under damping system/vibration (不足減衰)<br>
 
-+ [ ] Under damping system/vibration (不足減衰)
-
-+ [ ] Over damping system/vibration (過減衰)
++ [ ] Over damping system/vibration (過減衰)<br>
 
 ---
 
@@ -73,6 +73,6 @@ pip install -r requirements.txt
 
 ## Project Status
 
-* █▒▒▒▒▒▒▒   In progress
+* █████▒▒▒▒▒▒▒▒   In progress
 
 ---
