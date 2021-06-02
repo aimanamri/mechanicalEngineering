@@ -42,13 +42,21 @@ pip install -r requirements.txt
 
 # 💻 Mechanical Engineering Calculations
 + [x] Projectile motion (斜方投射) <br>
-[projectile_motion.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/projectile_motion.ipynb)
+[projectile_motion.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/projectile_motion.ipynb)<br>
+<img src="https://i.imgur.com/2XhXp6p.png" alt="drawing" width="450"/>
+
 + [x] von Mises Failure Theory Plots <br>
 [vonmises-failure_plot.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/vonmises-failure_plot.ipynb)
+<img src="https://i.imgur.com/QpCTPQ7.png" alt="drawing" width="450"/>
+
 + [x] Shear Force Diagram,SFD and Bending Moment Diagram,BMD (せん断力図・曲げモーメント図) <br>
 [SFD-BMD.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/SFD-BMD.ipynb)
+<img src="https://i.imgur.com/gHIwttX.png" alt="drawing" width="450"/>
+
 + [x] Mohr's Circle (モールの応力円)<br>
 [mohr_circle.py](https://github.com/aimanamri/python-mechEngineering/blob/main/mohr_circle.py)
+<img src="https://i.imgur.com/QYny4Js.png" alt="drawing" width="450"/>
+
 + [ ] Heat effieciency, η of ideal Rankine cycle (理想ランキンサイクルの熱効率)<br>
 
 + [ ] Heat effieciency, η of  Rankine reheat cycle (理想ランキンサイクルの熱効率)<br>
