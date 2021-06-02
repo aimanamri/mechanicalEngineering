@@ -43,6 +43,7 @@ pip install -r requirements.txt
 # 💻 Mechanical Engineering Calculations
 + [x] Projectile motion (斜方投射) <br>
 [projectile_motion.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/projectile_motion.ipynb)<br>
+[projectile_motion.py](https://github.com/aimanamri/python-mechEngineering/blob/main/projectile_motion.py)<br>
 <img src="https://i.imgur.com/2XhXp6p.png" alt="drawing" width="450"/>
 
 + [x] von Mises Failure Theory Plots <br>
