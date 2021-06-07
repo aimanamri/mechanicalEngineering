@@ -34,3 +34,5 @@ plt.plot(x1,y1,label = r'$\theta$ = 45$\degree$')
 plt.plot(x2,y2,label = r'$\theta$ = 60$\degree$',color='red')
 plt.legend()
 plt.show()
+
+# https://www.udemy.com/user/shriram-s-kakade/
