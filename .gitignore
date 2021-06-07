@@ -1,2 +1,8 @@
 # Jupyter Notebook
 .ipynb_checkpoints
+
+.vscode
+*.txt
+.env
+*.py
+/myenv
