@@ -1,22 +1,22 @@
 <p align="center">
-  <a href="https://github.com/aimanamri/python-mechEngineering">
-    <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/aimanamri/python-mechEngineering">
+  <a href="https://github.com/aimanamri/mechanicalEngineering">
+    <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/aimanamri/mechanicalEngineering">
   </a>
 
-  <a href="https://github.com/aimanamri/python-mechEngineering">
-    <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/aimanamri/python-mechEngineering">
+  <a href="https://github.com/aimanamri/mechanicalEngineering">
+    <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/aimanamri/mechanicalEngineering">
   </a>
   
-  <a href="https://github.com/aimanamri/python-mechEngineering/stargazers">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/aimanamri/python-mechEngineering?style=social">
+  <a href="https://github.com/aimanamri/mechanicalEngineering/stargazers">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/aimanamri/mechanicalEngineering?style=social">
   </a>
 
-  <a href="https://github.com/aimanamri/python-mechEngineering/commits/main">
-    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/aimanamri/python-mechEngineering">
+  <a href="https://github.com/aimanamri/mechanicalEngineering/commits/main">
+    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/aimanamri/mechanicalEngineering">
   </a>
 
-  <a href="https://github.com/aimanamri/python-mechEngineering">
-    <img alt="Repository Size" src="https://img.shields.io/github/repo-size/aimanamri/python-mechEngineering">
+  <a href="https://github.com/aimanamri/mechanicalEngineering">
+    <img alt="Repository Size" src="https://img.shields.io/github/repo-size/aimanamri/mechanicalEngineering">
   </a>
 </p>
 
@@ -25,7 +25,7 @@
 Starting with **git clone**:
 
 ```bash
-git clone https://github.com/aimanamri/python-mechEngineering.git -b main
+git clone https://github.com/aimanamri/mechanicalEngineering.git -b main
 ```
 
 ## Pre-Requisites
@@ -42,20 +42,20 @@ pip install -r requirements.txt
 
 # 💻 Mechanical Engineering Calculations
 + [x] Projectile motion (斜方投射) <br>
-[projectile_motion.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/projectile_motion.ipynb)<br>
-[projectile_motion.py](https://github.com/aimanamri/python-mechEngineering/blob/main/projection_motion.py)<br>
+[projectile_motion.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/projectile_motion.ipynb)<br>
+[projectile_motion.py](https://github.com/aimanamri/mechanicalEngineering/blob/main/projection_motion.py)<br>
 <img src="https://i.imgur.com/2XhXp6p.png" alt="drawing" width="450"/>
 
 + [x] von Mises Failure Theory Plots <br>
-[vonmises-failure_plot.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/vonmises-failure_plot.ipynb)
+[vonmises-failure_plot.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/vonmises-failure_plot.ipynb)
 <img src="https://i.imgur.com/QpCTPQ7.png" alt="drawing" width="450"/>
 
 + [x] Shear Force Diagram,SFD and Bending Moment Diagram,BMD (せん断力図・曲げモーメント図) <br>
-[SFD-BMD.ipynb](https://github.com/aimanamri/python-mechEngineering/blob/main/SFD-BMD.ipynb)
+[SFD-BMD.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/SFD-BMD.ipynb)
 <img src="https://i.imgur.com/gHIwttX.png" alt="drawing" width="450"/>
 
 + [x] Mohr's Circle (モールの応力円)<br>
-[mohr_circle.py](https://github.com/aimanamri/python-mechEngineering/blob/main/mohr_circle.py)
+[mohr_circle.py](https://github.com/aimanamri/mechanicalEngineering/blob/main/mohr_circle.py)
 <img src="https://i.imgur.com/QYny4Js.png" alt="drawing" width="450"/>
 
 + [ ] Heat effieciency, η of ideal Rankine cycle (理想ランキンサイクルの熱効率)<br>
