@@ -33,9 +33,6 @@ git clone https://github.com/aimanamri/mechanicalEngineering.git -b main
 - Jupyter Notebook
 - Install all packages in requirements.txt
 ```bash
-pip install numpy matplotlib scipy pyromat
-```
-```bash
 pip install -r requirements.txt
 ```
 ---
@@ -57,6 +54,10 @@ pip install -r requirements.txt
 + [x] Mohr's Circle (モールの応力円)<br>
 [mohr_circle.py](https://github.com/aimanamri/mechanicalEngineering/blob/main/mohr_circle.py)
 <img src="https://i.imgur.com/QYny4Js.png" alt="drawing" width="450"/>
+
++ [x] Tensile Test (引張試験)<br>
+- [tensile-test.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/tensile-test.ipynb)
+- Data Source: [practice.xlsx](https://github.com/aimanamri/mechanicalEngineering/blob/main/practice.xlsx)
 
 + [ ] Heat effieciency, η of ideal Rankine cycle (理想ランキンサイクルの熱効率)<br>
 
@@ -82,6 +83,6 @@ pip install -r requirements.txt
 
 ## Project Status
 
-* █████▒▒▒▒▒▒▒▒   In progress
+* ███████▒▒▒▒▒   In progress
 
 ---
