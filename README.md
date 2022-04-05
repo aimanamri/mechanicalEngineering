@@ -58,6 +58,7 @@ pip install -r requirements.txt
 + [x] Tensile Test (引張試験)<br>
 - [tensile-test.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/tensile-test.ipynb)
 - Data Source: [practice.xlsx](https://github.com/aimanamri/mechanicalEngineering/blob/main/practice.xlsx)
+<img src="https://github.com/aimanamri/mechanicalEngineering/blob/main/stressstrain_diagram.jpg" alt="drawing" width="450"/>
 
 + [ ] Heat effieciency, η of ideal Rankine cycle (理想ランキンサイクルの熱効率)<br>
 
