@@ -99,6 +99,9 @@ jupyter nbconvert --to notebook --execute --inplace *.ipynb
 + [x] Over damping system/vibration (過減衰)<br>
 [damped_vibration.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/damped_vibration.ipynb)
 
++ [x] Numerical computation of Force, Velocity & Acceleration - Euler's method, Trapezoidal rule, Simpson's rule (数値解析による力・速度・加速度の計算)<br>
+[numerical_kinematics.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/numerical_kinematics.ipynb)
+
 ---
 
 # 💻 Engineering Math using Python 
