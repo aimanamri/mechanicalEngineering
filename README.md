@@ -1,121 +1,316 @@
-<p align="center">
-  <a href="https://github.com/aimanamri/mechanicalEngineering">
-    <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/aimanamri/mechanicalEngineering">
-  </a>
+<div align="center">
 
-  <a href="https://github.com/aimanamri/mechanicalEngineering">
-    <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/aimanamri/mechanicalEngineering">
-  </a>
-  
-  <a href="https://github.com/aimanamri/mechanicalEngineering/stargazers">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/aimanamri/mechanicalEngineering?style=social">
-  </a>
+<img src="assets/hero.gif" alt="Pixel-art scene: a boiler heats water, steam rises from a vent and a brass gear train turns under a starry sky" width="100%">
 
-  <a href="https://github.com/aimanamri/mechanicalEngineering/commits/main">
-    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/aimanamri/mechanicalEngineering">
-  </a>
+# ⚙️ Mechanical Engineering in Python
 
-  <a href="https://github.com/aimanamri/mechanicalEngineering">
-    <img alt="Repository Size" src="https://img.shields.io/github/repo-size/aimanamri/mechanicalEngineering">
-  </a>
-</p>
+**Worked calculations from a mechanical engineering degree, as runnable notebooks.**<br>
+Statics · Strength of materials · Thermodynamics · Vibration · Numerical methods<br>
+<sub>日本語ラベル付き · labels in English and 日本語</sub>
 
-## ▶️ Getting Started
+<br>
 
-Starting with **git clone**:
+<a href="https://github.com/aimanamri/mechanicalEngineering"><img alt="Top language" src="https://img.shields.io/github/languages/top/aimanamri/mechanicalEngineering?style=for-the-badge&labelColor=262a3d&color=c8963c"></a>
+<a href="https://github.com/aimanamri/mechanicalEngineering/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/aimanamri/mechanicalEngineering?style=for-the-badge&labelColor=262a3d&color=c8963c"></a>
+<a href="https://github.com/aimanamri/mechanicalEngineering/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/aimanamri/mechanicalEngineering?style=for-the-badge&labelColor=262a3d&color=c8963c"></a>
+<img alt="Python 3.12+" src="https://img.shields.io/badge/python-3.12%2B-262a3d?style=for-the-badge&logo=python&logoColor=ffcc4d">
+
+<br><br>
+
+**Jump to:**
+[🚀 Quick start](#-quick-start) ·
+[🏗️ Solid mechanics](#%EF%B8%8F-solid-mechanics) ·
+[♨️ Thermodynamics](#%EF%B8%8F-thermodynamics) ·
+[🎯 Dynamics & vibration](#-dynamics--vibration) ·
+[🧮 Engineering math](#-engineering-math) ·
+[🎨 Credits](#-credits)
+
+</div>
+
+<br>
+
+> **How to read this page.** Each topic has a looping pixel-art animation that illustrates the physics, a one-line summary, links to the notebook or script, and a collapsed **📈 See the plot** panel with the real output. Click a GIF to open its source file.
+
+---
+
+## 🚀 Quick start
 
 ```bash
 git clone https://github.com/aimanamri/mechanicalEngineering.git -b main
 cd mechanicalEngineering
-```
-
-## Pre-Requisites
-- **Python 3.12 or later** - `requirements.txt` is pinned to NumPy 2.x/SciPy 1.18, which require Python ≥3.12 (tested on 3.13).
-- A virtual environment is recommended so these pins don't collide with other projects:
-```bash
 python3 -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
-```
-- Install all packages in `requirements.txt` (everything the notebooks import) plus `jupyter` itself (which pulls in `ipykernel` automatically):
-```bash
 pip install -r requirements.txt jupyter
+jupyter lab
 ```
 
-### Libraries used
+Open any `.ipynb` and choose **Run All**. Standalone scripts run directly: `python3 mohr_circle.py`.
+
+<details>
+<summary><b>📋 Requirements and libraries</b></summary>
+
+<br>
+
+**Python 3.12 or later.** `requirements.txt` is pinned to NumPy 2.x / SciPy 1.18, which need Python ≥ 3.12 (tested on 3.13). A virtual environment keeps those pins away from your other projects.
+
 | Library | Used for |
 |---|---|
-| `numpy`, `scipy` | numerical arrays, interpolation, integration, linear algebra, ODE solving |
-| `matplotlib` | all plots (SFD/BMD, Mohr's circle, stress-strain curves, T-s/p-h diagrams, ...) |
-| `japanize_matplotlib` | renders the Japanese (日本語) labels/titles used throughout |
+| `numpy`, `scipy` | arrays, interpolation, integration, linear algebra, ODE solving |
+| `matplotlib` | every plot: SFD/BMD, Mohr's circle, stress-strain curves, T-s and p-h diagrams |
+| `japanize_matplotlib` | renders the Japanese (日本語) labels and titles |
 | `pandas`, `openpyxl` | reading and processing `practice.xlsx` in the tensile-test notebook |
-| `pyromat` | steam and R-134a refrigerant properties (Rankine, reheat, refrigeration cycle notebooks) - configured to output **SI-derived units (MPa, K, kJ/kg)** rather than its bar default |
-| `rich` | nicely formatted result tables printed inside the thermodynamics notebooks |
-| `setuptools` | provides the `distutils` shim `japanize_matplotlib` needs on Python 3.12+ (distutils was removed from the standard library) |
+| `pyromat` | steam and R-134a properties for the cycle notebooks, set to **SI-derived units (MPa, K, kJ/kg)** instead of its bar default |
+| `rich` | formatted result tables printed in the thermodynamics notebooks |
+| `setuptools` | supplies the `distutils` shim `japanize_matplotlib` needs on Python 3.12+ |
 
-### Running the notebooks
-- **Jupyter Notebook / JupyterLab**: `jupyter notebook` or `jupyter lab`, then open any `.ipynb` file and *Run All*.
-- **VS Code**: open the folder and use the built-in Jupyter extension (select the `venv` kernel created above).
-- **Headless / regenerate all outputs from the command line**:
-```bash
-jupyter nbconvert --to notebook --execute --inplace *.ipynb
-```
-- Standalone scripts (`mohr_circle.py`, `projection_motion.py`) run directly with `python3 <script>.py`.
+**Other ways to run them**
 
----
+- **VS Code:** open the folder and use the Jupyter extension with the `venv` kernel.
+- **Headless, regenerate every output:**
+  ```bash
+  jupyter nbconvert --to notebook --execute --inplace *.ipynb
+  ```
 
-# 💻 Mechanical Engineering Calculations
-+ [x] Projectile motion (斜方投射) <br>
-[projectile_motion.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/projectile_motion.ipynb)<br>
-[projectile_motion.py](https://github.com/aimanamri/mechanicalEngineering/blob/main/projection_motion.py)<br>
-<img src="https://i.imgur.com/2XhXp6p.png" alt="drawing" width="450"/>
-
-+ [x] von Mises Failure Theory Plots <br>
-[vonmises-failure_plot.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/vonmises-failure_plot.ipynb)
-<img src="https://i.imgur.com/QpCTPQ7.png" alt="drawing" width="450"/>
-
-+ [x] Shear Force Diagram,SFD and Bending Moment Diagram,BMD (せん断力図・曲げモーメント図) <br>
-[SFD-BMD.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/SFD-BMD.ipynb)
-<img src="https://i.imgur.com/gHIwttX.png" alt="drawing" width="450"/>
-
-+ [x] Mohr's Circle (モールの応力円)<br>
-[mohr_circle.py](https://github.com/aimanamri/mechanicalEngineering/blob/main/mohr_circle.py)
-<img src="https://i.imgur.com/QYny4Js.png" alt="drawing" width="450"/>
-
-+ [x] Tensile Test (引張試験)<br>
-- [tensile-test.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/tensile-test.ipynb)
-- Data Source: [practice.xlsx](https://github.com/aimanamri/mechanicalEngineering/blob/main/practice.xlsx)
-<img src="https://github.com/aimanamri/mechanicalEngineering/blob/main/stress-strain_diagram.jpg?raw=true" alt="drawing" width="450"/>
-
-+ [x] Heat effieciency, η of ideal Rankine cycle (理想ランキンサイクルの熱効率)<br>
-[rankine_cycle.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/rankine_cycle.ipynb)
-
-+ [x] Heat effieciency, η of  Rankine reheat cycle (理想ランキンサイクルの熱効率)<br>
-[rankine_reheat_cycle.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/rankine_reheat_cycle.ipynb)
-
-+ [x] Coefficient of performance(COF) of ideal refrigeration cycle　(冷凍サイクルの成績係数/動作係数)<br>
-[refrigeration_cycle.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/refrigeration_cycle.ipynb)
-
-+ [x] Under damping system/vibration (不足減衰)<br>
-+ [x] Over damping system/vibration (過減衰)<br>
-[damped_vibration.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/damped_vibration.ipynb)
-
-+ [x] Numerical computation of Force, Velocity & Acceleration - Euler's method, Trapezoidal rule, Simpson's rule (数値解析による力・速度・加速度の計算)<br>
-[numerical_kinematics.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/numerical_kinematics.ipynb)
+</details>
 
 ---
 
-# 💻 Engineering Math using Python 
-📔 [math.ipynb](https://github.com/aimanamri/mechanicalEngineering/blob/main/math.ipynb) - All calculation was made in this single notebook.
-+ [x] Interpolation (線形補間)
+## 🏗️ Solid mechanics
 
-+ [x] Numerical intergration using trapezoidal rule and Simpson (数値積分：台形公式とシンプソン則)
+<table>
+<tr>
+<td width="260" align="center" valign="top">
+<a href="mohr_circle.py"><img src="assets/pixelbolt/spinning-hoop.gif" alt="A hoop spinning" width="240"></a>
+</td>
+<td valign="top">
 
-+ [x] Addition, subtraction and multiplication of matrice (行列の足し算・引き算・掛け算)
+### Mohr's Circle
+*モールの応力円*
 
-+ [x] Eigenvector and eigenvalue (固有ベクトル・固有値)
+A 2D stress state (σx, σy, τxy) drawn as Mohr's circle.
 
-## Project Status
+[![script](https://img.shields.io/badge/mohr__circle.py-open-c8963c?style=flat-square&logo=python&logoColor=white&labelColor=262a3d)](mohr_circle.py)
 
-* █████████████   Complete
+<details>
+<summary>📈 See the plot</summary>
+<br>
+<img src="https://i.imgur.com/QYny4Js.png" alt="Mohr's circle plot" width="450">
+</details>
+
+</td>
+</tr>
+<tr>
+<td width="260" align="center" valign="top">
+<a href="SFD-BMD.ipynb"><img src="assets/pixelbolt/rope-bridge.gif" alt="A rope bridge sagging under load" width="240"></a>
+</td>
+<td valign="top">
+
+### Shear Force and Bending Moment Diagrams
+*せん断力図・曲げモーメント図 (SFD / BMD)*
+
+Shear force and bending moment along a loaded beam.
+
+[![notebook](https://img.shields.io/badge/SFD--BMD.ipynb-open-c8963c?style=flat-square&logo=jupyter&logoColor=white&labelColor=262a3d)](SFD-BMD.ipynb)
+
+<details>
+<summary>📈 See the plot</summary>
+<br>
+<img src="https://i.imgur.com/gHIwttX.png" alt="SFD and BMD plot" width="450">
+</details>
+
+</td>
+</tr>
+<tr>
+<td width="260" align="center" valign="top">
+<a href="tensile-test.ipynb"><img src="assets/pixelbolt/plank-tip.gif" alt="A plank loaded until it tips" width="240"></a>
+</td>
+<td valign="top">
+
+### Tensile Test
+*引張試験*
+
+Measured test data from `practice.xlsx` in, stress-strain diagram out.
+
+[![notebook](https://img.shields.io/badge/tensile--test.ipynb-open-c8963c?style=flat-square&logo=jupyter&logoColor=white&labelColor=262a3d)](tensile-test.ipynb)
+[![data](https://img.shields.io/badge/data-practice.xlsx-262a3d?style=flat-square&labelColor=262a3d&color=6a6477)](practice.xlsx)
+
+<details>
+<summary>📈 See the plot</summary>
+<br>
+<img src="stress-strain_diagram.jpg" alt="Stress-strain diagram" width="450">
+</details>
+
+</td>
+</tr>
+<tr>
+<td width="260" align="center" valign="top">
+<a href="vonmises-failure_plot.ipynb"><img src="assets/pixelbolt/crate-smash.gif" alt="A crate smashing apart" width="240"></a>
+</td>
+<td valign="top">
+
+### von Mises Failure Theory
+Where a ductile material stops being safe: the yield envelope plotted against the principal stresses.
+
+[![notebook](https://img.shields.io/badge/vonmises--failure__plot.ipynb-open-c8963c?style=flat-square&logo=jupyter&logoColor=white&labelColor=262a3d)](vonmises-failure_plot.ipynb)
+
+<details>
+<summary>📈 See the plot</summary>
+<br>
+<img src="https://i.imgur.com/QpCTPQ7.png" alt="von Mises failure plot" width="450">
+</details>
+
+</td>
+</tr>
+</table>
 
 ---
+
+## ♨️ Thermodynamics
+
+<table>
+<tr>
+<td width="260" align="center" valign="top">
+<a href="rankine_cycle.ipynb"><img src="assets/pixelbolt/boiling-pot.gif" alt="Water boiling in a pot" width="240"></a>
+</td>
+<td valign="top">
+
+### Ideal Rankine Cycle
+*理想ランキンサイクルの熱効率*
+
+Heat efficiency η of the basic steam cycle, with steam properties from `pyromat`.
+
+[![notebook](https://img.shields.io/badge/rankine__cycle.ipynb-open-c8963c?style=flat-square&logo=jupyter&logoColor=white&labelColor=262a3d)](rankine_cycle.ipynb)
+
+</td>
+</tr>
+<tr>
+<td width="260" align="center" valign="top">
+<a href="rankine_reheat_cycle.ipynb"><img src="assets/pixelbolt/steam-vent.gif" alt="Steam venting from a pipe" width="240"></a>
+</td>
+<td valign="top">
+
+### Rankine Reheat Cycle
+*再熱ランキンサイクル*
+
+The same cycle with steam reheated between turbine stages, including turbine exit steam quality.
+
+[![notebook](https://img.shields.io/badge/rankine__reheat__cycle.ipynb-open-c8963c?style=flat-square&logo=jupyter&logoColor=white&labelColor=262a3d)](rankine_reheat_cycle.ipynb)
+
+</td>
+</tr>
+<tr>
+<td width="260" align="center" valign="top">
+<a href="refrigeration_cycle.ipynb"><img src="assets/pixelbolt/dry-ice.gif" alt="Cold vapour pouring from dry ice" width="240"></a>
+</td>
+<td valign="top">
+
+### Ideal Refrigeration Cycle
+*冷凍サイクルの成績係数 / 動作係数 (COP)*
+
+Coefficient of performance of an R-134a vapour-compression cycle, on the p-h diagram.
+
+[![notebook](https://img.shields.io/badge/refrigeration__cycle.ipynb-open-c8963c?style=flat-square&logo=jupyter&logoColor=white&labelColor=262a3d)](refrigeration_cycle.ipynb)
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎯 Dynamics & vibration
+
+<table>
+<tr>
+<td width="260" align="center" valign="top">
+<a href="projectile_motion.ipynb"><img src="assets/pixelbolt/bouncing-pixel.gif" alt="A ball bouncing" width="240"></a>
+</td>
+<td valign="top">
+
+### Projectile Motion
+*斜方投射*
+
+Trajectory, range and peak height for any launch angle and speed.
+
+[![notebook](https://img.shields.io/badge/projectile__motion.ipynb-open-c8963c?style=flat-square&logo=jupyter&logoColor=white&labelColor=262a3d)](projectile_motion.ipynb)
+[![script](https://img.shields.io/badge/projection__motion.py-open-c8963c?style=flat-square&logo=python&logoColor=white&labelColor=262a3d)](projection_motion.py)
+
+<details>
+<summary>📈 See the plot</summary>
+<br>
+<img src="https://i.imgur.com/2XhXp6p.png" alt="Projectile motion plot" width="450">
+</details>
+
+</td>
+</tr>
+<tr>
+<td width="260" align="center" valign="top">
+<a href="damped_vibration.ipynb"><img src="assets/pixelbolt/lantern.gif" alt="A lantern swinging on a chain" width="200"></a>
+</td>
+<td valign="top">
+
+### Damped Vibration
+*不足減衰 (under-damped) · 過減衰 (over-damped)*
+
+Under-damped and over-damped response of a vibrating system, side by side.
+
+[![notebook](https://img.shields.io/badge/damped__vibration.ipynb-open-c8963c?style=flat-square&logo=jupyter&logoColor=white&labelColor=262a3d)](damped_vibration.ipynb)
+
+</td>
+</tr>
+<tr>
+<td width="260" align="center" valign="top">
+<a href="numerical_kinematics.ipynb"><img src="assets/pixelbolt/wrecking-ball.gif" alt="A wrecking ball swinging into a stack of crates" width="240"></a>
+</td>
+<td valign="top">
+
+### Numerical Force, Velocity & Acceleration
+*数値解析による力・速度・加速度の計算*
+
+Euler's method, the trapezoidal rule and Simpson's rule applied to motion data.
+
+[![notebook](https://img.shields.io/badge/numerical__kinematics.ipynb-open-c8963c?style=flat-square&logo=jupyter&logoColor=white&labelColor=262a3d)](numerical_kinematics.ipynb)
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🧮 Engineering math
+
+<table>
+<tr>
+<td width="260" align="center" valign="top">
+<a href="math.ipynb"><img src="assets/pixelbolt/hourglass.gif" alt="Sand running through an hourglass" width="140"></a>
+</td>
+<td valign="top">
+
+### One notebook, four tools
+Every calculation lives in a single notebook.
+
+[![notebook](https://img.shields.io/badge/math.ipynb-open-c8963c?style=flat-square&logo=jupyter&logoColor=white&labelColor=262a3d)](math.ipynb)
+
+- **Interpolation** (線形補間)
+- **Numerical integration** with the trapezoidal rule and Simpson's rule (台形公式とシンプソン則)
+- **Matrix** addition, subtraction and multiplication (行列の足し算・引き算・掛け算)
+- **Eigenvalues and eigenvectors** (固有値・固有ベクトル)
+
+</td>
+</tr>
+</table>
+
+---
+
+## ✅ Status
+
+![Complete](https://img.shields.io/badge/status-complete-4caf50?style=for-the-badge&labelColor=262a3d)
+
+All topics listed above are complete.
+
+---
+
+## 🎨 Credits
+
+The pixel-art animations are made with **[Pixelbolt](https://github.com/skulitom/Pixelbolt)** (MIT licence, copy in [`assets/pixelbolt/LICENSE`](assets/pixelbolt/LICENSE)). They are illustrations of each topic, **not** output from the notebooks. The banner at the top is a new scene composed from Pixelbolt's boiling pot and steam vent with a gear train added.
+
+Code and notebooks are released under the repository [LICENSE](LICENSE).
