@@ -17,6 +17,8 @@ Statics · Strength of materials · Thermodynamics · Vibration · Numerical met
 
 <br><br>
 
+🌐 **English** · [日本語](README.ja.md)
+
 **Jump to:**
 [🚀 Quick start](#-quick-start) ·
 [🏗️ Solid mechanics](#%EF%B8%8F-solid-mechanics) ·
